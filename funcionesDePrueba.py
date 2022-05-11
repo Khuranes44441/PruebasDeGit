@@ -6,3 +6,7 @@ def edad(edad):
 
 def funcion_creada_desde_rama_master():
     print("soy una funcion creada originalmente desde la rama master")
+
+
+def funcion_creada_desde_rama_secundaria():
+    print("soy una funcion creada originalmente desde la rama secundaria")
