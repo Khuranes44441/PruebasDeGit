@@ -9,4 +9,6 @@ def funcion_creada_desde_rama_secundaria():
 
 def sumar(a,b):
     print(a+b)
-    
+
+
+nombre = "Ernesto"
