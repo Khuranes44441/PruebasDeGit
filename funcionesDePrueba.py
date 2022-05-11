@@ -3,3 +3,6 @@ def saludar(nombre):
 
 def edad(edad):
     print(f"tengo {edad} años")
+
+def funcion_creada_desde_rama_master():
+    print("soy una funcion creada originalmente desde la rama master")
