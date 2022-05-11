@@ -14,5 +14,6 @@ def presupuestoSetup(mes):
     print(f"PRESUPUESTO: ")
     print(f"el presupuesto para todo el setup sin contar la silla y el escritorio es de {presupuesto} pesos argentinos")
     print(f"el presupuesto que me queda para la silla y el escritorio es de {totalPresupuesto - presupuesto} pesos argentinos")
+    print("¡¡¡FINISH HIM!!!")
 
 presupuestoSetup("julio")
