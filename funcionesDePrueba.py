@@ -12,12 +12,4 @@ def sumar(a,b):
 
 
 nombre = "Ernesto"
-
-
-
-
-
-
-
-
 apellido = "Alvarez"
