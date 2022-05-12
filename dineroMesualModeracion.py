@@ -1,4 +1,4 @@
-def dineroModeracion(mes):
+def dineroModeracion(mes="junio"):
     dias_4_horas =  6
     paga_dias_4_horas = 1540
     paga1 = dias_4_horas*paga_dias_4_horas
@@ -15,6 +15,6 @@ def dineroModeracion(mes):
 
     
 
-dineroModeracion("junioooo")
+dineroModeracion()
 
 
