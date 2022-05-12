@@ -6,8 +6,12 @@ def finanzasPersonales():
 
     # DINERO MODERACION
 
-    def dineroModeracion(mes, cantidad_dias_4_horas, cantidad_dias_4_horas_y_media, cantidad_dias_8_horas):
+    def dineroModeracion(mes, cantidad_dias_3_horas_y_media, cantidad_dias_4_horas, cantidad_dias_4_horas_y_media, cantidad_dias_8_horas):
 
+        dias_3_horas_y_media = cantidad_dias_3_horas_y_media
+        paga_dias_3_horas_y_media = 1345
+        paga0 = dias_3_horas_y_media*paga_dias_3_horas_y_media
+        
         dias_4_horas = cantidad_dias_4_horas
         paga_dias_4_horas = 1540
         paga1 = dias_4_horas*paga_dias_4_horas
@@ -20,7 +24,7 @@ def finanzasPersonales():
         paga_dias_8_horas = 3270
         paga3 = dias_8_horas*paga_dias_8_horas
 
-        paga_moderacion_mensual = paga1 + paga2 + paga3
+        paga_moderacion_mensual = paga0 + paga1 + paga2 + paga3
 
         print(f"moderacion {mes}:  {paga_moderacion_mensual}")
         patrimonio_total.append(paga_moderacion_mensual)
@@ -41,10 +45,10 @@ def finanzasPersonales():
 
     
 
-    dineroModeracion("mayo", 6, 4, 1)
+    dineroModeracion("mayo",cantidad_dias_3_horas_y_media=1, cantidad_dias_4_horas=6, cantidad_dias_4_horas_y_media=5, cantidad_dias_8_horas=0 )
     ingresosExtra("mayo", 12840, 9000)
 
-    dineroModeracion("junio", 10, 0, 0)
+    dineroModeracion("junio",0, 10, 0, 0)
     ingresosExtra("junio", 6400, 9000)
     
     ingresosExtra("julio", 6400, 0)

@@ -7,7 +7,7 @@ def presupuestoSetup(mes):
     # 1657 = funda para pc
     
     presupuesto = 0
-    totalPresupuesto = 78470
+    totalPresupuesto = 78275
     for i in listaPrecios:
         presupuesto = presupuesto + i
 
