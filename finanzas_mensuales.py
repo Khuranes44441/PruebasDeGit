@@ -42,10 +42,11 @@ def finanzasPersonales():
     
 
     dineroModeracion("mayo", 6, 4, 1)
-    dineroModeracion("junio", 10, 0, 0)
-
     ingresosExtra("mayo", 12840, 9000)
+
+    dineroModeracion("junio", 10, 0, 0)
     ingresosExtra("junio", 6400, 9000)
+    
     ingresosExtra("julio", 6400, 0)
         
 
