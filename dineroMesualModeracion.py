@@ -15,6 +15,6 @@ def dineroModeracion(mes):
 
     
 
-dineroModeracion("junio")
+dineroModeracion("junioooo")
 
 
