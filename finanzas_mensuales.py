@@ -6,7 +6,7 @@ def finanzasPersonales():
 
     # DINERO MODERACION
 
-    def dineroModeracion(mes, cantidad_dias_3_horas_y_media, cantidad_dias_4_horas, cantidad_dias_4_horas_y_media, cantidad_dias_8_horas):
+    def sueldo_mensual(mes, cantidad_dias_3_horas_y_media, cantidad_dias_4_horas, cantidad_dias_4_horas_y_media, cantidad_dias_8_horas, progresar, ife):
 
         dias_3_horas_y_media = cantidad_dias_3_horas_y_media
         paga_dias_3_horas_y_media = 1345
@@ -34,24 +34,27 @@ def finanzasPersonales():
 
 # INGRESOS EXTRA
 
-    def ingresosExtra(mes, progresar, ife):
+        
         progresar = progresar
         ife = ife
         ingresos_extra_total = progresar + ife
         print(f"ingresos extra {mes}: {ingresos_extra_total}")
         patrimonio_total.append(ingresos_extra_total)
 
+        print(f"SUELDO MENSUAL {mes}: {paga_moderacion_mensual + ingresos_extra_total}")
+
 # EJECUCION DEL CODIGO
 
     
 
-    dineroModeracion("mayo",cantidad_dias_3_horas_y_media=1, cantidad_dias_4_horas=6, cantidad_dias_4_horas_y_media=5, cantidad_dias_8_horas=0 )
-    ingresosExtra("mayo", 12840, 9000)
-
-    dineroModeracion("junio",0, 10, 0, 0)
-    ingresosExtra("junio", 6400, 9000)
+    sueldo_mensual("mayo",cantidad_dias_3_horas_y_media=1, cantidad_dias_4_horas=6, cantidad_dias_4_horas_y_media=5, cantidad_dias_8_horas=0,progresar=12840, ife= 9000 )
     
-    ingresosExtra("julio", 6400, 0)
+
+    sueldo_mensual("junio",0, 10, 0, 0, 6400,9000)
+
+    sueldo_mensual("julio",0,10,0,0,6400,0)
+    
+
         
 
     def calculo_patrimonio_total ():
