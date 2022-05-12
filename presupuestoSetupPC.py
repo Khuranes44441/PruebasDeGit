@@ -7,14 +7,13 @@ def presupuestoSetup(mes):
     # 1657 = funda para pc
     
     presupuesto = 0
-    totalPresupuesto = 67800
+    totalPresupuesto = 78470
     for i in listaPrecios:
         presupuesto = presupuesto + i
 
     print(f"PRESUPUESTO: ")
     print(f"el presupuesto para todo el setup sin contar la silla y el escritorio es de {presupuesto} pesos argentinos")
-    print(f"el presupuesto que me queda para la silla y el escritorio es de {totalPresupuesto - presupuesto} pesos argentinos")
-    print("¡¡¡FINISH HIM!!!")
-    print("¡¡¡FATALITY!!!")
+    print(f"el presupuesto que me queda en {mes} para la silla y el escritorio es de {totalPresupuesto - presupuesto} pesos argentinos")
+    
 
 presupuestoSetup("julio")
