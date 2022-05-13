@@ -1,5 +1,5 @@
 
-def finanzasPersonales(mes, comida, vicios, gym):
+def finanzasPersonales(mes):
     patrimonio_total = []
     gastos_mensuales = []
     valor_setup_pc = 32707
@@ -56,10 +56,10 @@ def finanzasPersonales(mes, comida, vicios, gym):
         comidA = comida
         vicioS = vicios
         gyM = gym
-        gastos_extra = comida + vicios + gym
+        gastos_extra = comidA + vicioS + gyM
         gastos_mensuales.append(gastos_extra)
         print(
-            f"GASTOS EXTRA {mes}: \ncomida = {comidA} \nvicios = {vicioS} \ngym = {gyM}")
+            f"GASTOS EXTRA {mes}: \ncomida = {comidA} \nvicios = {vicioS} \ngym = {gyM} \n")
         print(" ")
         print(f"el sueldo mensual de {mes} despues de descontar los gastos extra mensuales es de {paga_moderacion_mensual + ingresos_extra_total - gastos_extra}")
         print("*******************************************************************************************")
@@ -74,13 +74,13 @@ def finanzasPersonales(mes, comida, vicios, gym):
 
     sueldo_mensual("agosto", 0, 10, 0, 0, 6400, 0, 5000, 3000, 3200)
 
-    sueldo_mensual("septiembre", 0, 10, 0, 0, 6400, 0, 6000, 4000, 4200)
+    sueldo_mensual("septiembre", ife=0, progresar=6400, cantidad_dias_3_horas_y_media=0, cantidad_dias_4_horas=10, cantidad_dias_4_horas_y_media=0, cantidad_dias_8_horas=0, comida=5000, gym=3200, vicios=3000)
 
-    sueldo_mensual("octubre", 0, 10, 0, 0, 6400, 0, 6000, 5000, 4200)
+    sueldo_mensual(mes="octubre", cantidad_dias_3_horas_y_media=0, cantidad_dias_4_horas=10, cantidad_dias_4_horas_y_media=0, cantidad_dias_8_horas=0, ife=0, progresar=6400, comida=5000, vicios=3000, gym=3200)
 
-    sueldo_mensual("noviembre",0,10,0,0,6400,0,10000,6000,5000)
+    sueldo_mensual("noviembre",0,10,0,0,6400,0,5000,vicios=3000,gym=3200)
 
-    sueldo_mensual("diciembre",0,10,0,0,6400,0,12000,10000,6000)
+    sueldo_mensual("diciembre",0,10,0,0,6400,0,comida=5000,vicios=3000,gym=3200)
 
 
 # BALANCE GENERAL DE FINANZAS
@@ -156,7 +156,5 @@ def finanzasPersonales(mes, comida, vicios, gym):
     validador_finanzas()
 
 
-finanzasPersonales(mes="diciembre", comida=5000, vicios=3000, gym=3200)
-# REALIZAR TODOS LOS CAMBIOS DESDE ACA, NO DESDE ADENTRO DE LA FUNCION!!!
-# EJEMPLO: PARAMETRO 2: CANTIDAD DE MESES TRABAJADOS
-#          PARAMETRO 3 : CANTIDAD DE MESES GASTO EXTRA
+finanzasPersonales(mes="diciembre")
+# COLOCAR LOS MESES TRAABAJADOS DESDE ACA!!!
