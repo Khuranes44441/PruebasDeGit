@@ -5,11 +5,13 @@ def finanzasPersonales(mes):
     valor_setup_pc = 32707
     sueldoMensual = 0
     sueldo_anual_total = []
+    # gastos extras mensuales:
+    gastos_extra = 11200
     comidA = []
     vicioS = []
     gyM = []
 
-    print(f"FINANZAS PERSONALES {mes}: ")
+    print(f"FINANZAS PERSONALES HASTA {mes}: ")
 
     def sueldo_mensual(mes, cantidad_dias_3_horas_y_media, cantidad_dias_4_horas, cantidad_dias_4_horas_y_media, cantidad_dias_8_horas, progresar, ife):
 
@@ -42,6 +44,7 @@ def finanzasPersonales(mes):
         patrimonio_total.append(ingresos_extra_total)
 
         print(f"SUELDO MENSUAL {mes}: {paga_moderacion_mensual + ingresos_extra_total}")
+        print(f"SUELDO MENSUAL {mes} despues de descontar los gastos extra mensuales: {paga_moderacion_mensual + ingresos_extra_total - gastos_extra}")
 
         sueldoMensual = paga_moderacion_mensual + ingresos_extra_total
         sueldo_anual_total.append(sueldoMensual)
@@ -51,7 +54,7 @@ def finanzasPersonales(mes):
 
 # MESES TRABAJADOS
 
-    sueldo_mensual("mayo",1, 6, 5, 0, 12840, 9000 )
+    sueldo_mensual("mayo",1, 6, 5, 0, 12840, 9000)
     
     sueldo_mensual("junio",0, 10, 0, 0, 6400,9000)
 
@@ -67,7 +70,7 @@ def finanzasPersonales(mes):
 
     sueldo_mensual("diciembre",0,10,0,0,6400,0)
 
-    print(f"sueldo anual: {sum(sueldo_anual_total)}")
+    print(f"TOTAL: {sum(sueldo_anual_total)}")
 
 # GASTOS EXTRA MENSUALES
 
@@ -78,13 +81,13 @@ def finanzasPersonales(mes):
         vicioS.append(vicios)
         gym = gym
         gyM.append(gym)
-        gastos_totales_mensuales = comida + vicios + gym
-        gastos_mensuales.append(gastos_totales_mensuales)
+        gastos_extra = comida + vicios + gym
+        gastos_mensuales.append(gastos_extra)
 
     
-    
-    gastos_extra_mensuales("junio",5000,3000,3200)
+    gastos_extra_mensuales("mayo",5000,3000,3200)
     print(f"gastos extra: \n comida = {comidA} \n vicios = {vicioS} \n gym = {gyM}")
+    gastos_extra_mensuales("junio",5000,3000,3200)
     gastos_extra_mensuales("julio",5000,3000,3200)
     gastos_extra_mensuales("agosto",5000,3000,3200)
     gastos_extra_mensuales("septiembre",5000,3000,3200)
@@ -94,7 +97,7 @@ def finanzasPersonales(mes):
 
     print(f"gastos extra acumulados al mes de {mes}: {sum(gastos_mensuales)} pesos")
     
-    
+# PATRIMONIO TOTAL
     
     def calculo_patrimonio_total ():
             
@@ -105,13 +108,16 @@ def finanzasPersonales(mes):
     def gasto_unico_setup_pc():
         recursos_para_setup = sum(patrimonio_total) - sum (gastos_mensuales)
         print(f"patrimonio en {mes} despues de comprar el setup de la pc es de {recursos_para_setup - valor_setup_pc} pesos ")
+        print("*************************************")
+        print(f"TOTAL: {recursos_para_setup - valor_setup_pc}")
     
     gasto_unico_setup_pc()
 
+# VALIDADOR DE FINANZAS
 
     def validador_finanzas():
         total = sum(patrimonio_total) - sum(gastos_mensuales) - valor_setup_pc
-        print(f"*************************************")
+        print("*************************************")
         print(f"ESTADO DE MI PATRIMONIO {mes}: ")
         if total <= 0:
             print("te quedaste sin guita papa, TE FELICITO :) ")
@@ -145,5 +151,8 @@ def finanzasPersonales(mes):
     
 
 finanzasPersonales("diciembre")
+# REALIZAR TODOS LOS CAMBIOS DESDE ACA, NO DESDE ADENTRO DE LA FUNCION!!!
+# EJEMPLO: PARAMETRO 2: CANTIDAD DE MESES TRABAJADOS
+#          PARAMETRO 3 : CANTIDAD DE MESES GASTO EXTRA
 
 
