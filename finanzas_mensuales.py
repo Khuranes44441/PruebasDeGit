@@ -5,6 +5,7 @@ def finanzasPersonales(mes):
     valor_setup_pc = 32707
     sueldoMensual = 0
     sueldo_anual_total = []
+    comidA = 0
 
     print(f"FINANZAS PERSONALES {mes}: ")
 
@@ -64,27 +65,28 @@ def finanzasPersonales(mes):
 
     sueldo_mensual("diciembre",0,10,0,0,6400,0)
 
-    print(f"el sueldo anual es de {sum(sueldo_anual_total)}")
+    print(f"sueldo anual: {sum(sueldo_anual_total)}")
 
 # GASTOS EXTRA MENSUALES
 
-    def gastos_extra_mensuales(mes):
-        comida = 5000
-        vicios = 3000
-        gym = 3200
+    def gastos_extra_mensuales(mes,comida,vicios,gym):
+        comida = comida
+        vicios = vicios
+        gym = gym
         gastos_totales_mensuales = comida + vicios + gym
         gastos_mensuales.append(gastos_totales_mensuales)
     
 
-    gastos_extra_mensuales("junio")
-    gastos_extra_mensuales("julio")
-    gastos_extra_mensuales("agosto")
-    gastos_extra_mensuales("septiembre")
-    gastos_extra_mensuales("octubre")
-    gastos_extra_mensuales("noviembre")
-    gastos_extra_mensuales("diciembre")
+    gastos_extra_mensuales("junio",5000,3000,3200)
+    gastos_extra_mensuales("julio",5000,3000,3200)
+    gastos_extra_mensuales("agosto",5000,3000,3200)
+    gastos_extra_mensuales("septiembre",5000,3000,3200)
+    gastos_extra_mensuales("octubre",5000,3000,3200)
+    gastos_extra_mensuales("noviembre",5000,3000,3200)
+    gastos_extra_mensuales("diciembre",5000,3000,3200)
 
     print(f"gastos extra acumulados al mes de {mes}: {sum(gastos_mensuales)} pesos")
+    print(f"gastos extra: \n comida = 5000 \n vicios = 3000 \n gym = 3200")
     
     
 
