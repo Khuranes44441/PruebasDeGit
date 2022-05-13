@@ -5,7 +5,9 @@ def finanzasPersonales(mes):
     valor_setup_pc = 32707
     sueldoMensual = 0
     sueldo_anual_total = []
-    comidA = 0
+    comidA = []
+    vicioS = []
+    gyM = []
 
     print(f"FINANZAS PERSONALES {mes}: ")
 
@@ -71,13 +73,18 @@ def finanzasPersonales(mes):
 
     def gastos_extra_mensuales(mes,comida,vicios,gym):
         comida = comida
+        comidA.append(comida)
         vicios = vicios
+        vicioS.append(vicios)
         gym = gym
+        gyM.append(gym)
         gastos_totales_mensuales = comida + vicios + gym
         gastos_mensuales.append(gastos_totales_mensuales)
-    
 
+    
+    
     gastos_extra_mensuales("junio",5000,3000,3200)
+    print(f"gastos extra: \n comida = {comidA} \n vicios = {vicioS} \n gym = {gyM}")
     gastos_extra_mensuales("julio",5000,3000,3200)
     gastos_extra_mensuales("agosto",5000,3000,3200)
     gastos_extra_mensuales("septiembre",5000,3000,3200)
@@ -86,11 +93,9 @@ def finanzasPersonales(mes):
     gastos_extra_mensuales("diciembre",5000,3000,3200)
 
     print(f"gastos extra acumulados al mes de {mes}: {sum(gastos_mensuales)} pesos")
-    print(f"gastos extra: \n comida = 5000 \n vicios = 3000 \n gym = 3200")
     
     
-
-
+    
     def calculo_patrimonio_total ():
             
             print(f"patrimonio en {mes} despues de descontar los gastos extras : {sum(patrimonio_total) - sum(gastos_mensuales)}")
