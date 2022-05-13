@@ -37,6 +37,7 @@ def finanzasPersonales(mes, comida, vicios, gym):
 
         patrimonio_total.append(paga_moderacion_mensual)
 
+        # INGRESOS EXTRA MENSUALES
 
         progresar = progresar
         ife = ife
@@ -50,6 +51,7 @@ def finanzasPersonales(mes, comida, vicios, gym):
         sueldoMensual = paga_moderacion_mensual + ingresos_extra_total
         sueldo_anual_total.append(sueldoMensual)
 
+        # GASTOS EXTRA MENSUALES
         
         comidA = comida
         vicioS = vicios
@@ -62,7 +64,8 @@ def finanzasPersonales(mes, comida, vicios, gym):
         print(f"el sueldo mensual de {mes} despues de descontar los gastos extra mensuales es de {paga_moderacion_mensual + ingresos_extra_total - gastos_extra}")
         print("*******************************************************************************************")
 
-
+        # MESES TRABAJADOS
+    
     sueldo_mensual("mayo", 1, 6, 5, 0, 12840, 9000, 5000, 3000, 3200)
 
     sueldo_mensual("junio", 0, 10, 0, 0, 6400, 9000, 5000, 3000, 3200)
@@ -79,10 +82,13 @@ def finanzasPersonales(mes, comida, vicios, gym):
 
     sueldo_mensual("diciembre",0,10,0,0,6400,0,12000,10000,6000)
 
+
+# BALANCE GENERAL DE FINANZAS
+
     print(" ")
     print(" ")
     print(" ")
-    print("BALANCE GENERAL:")
+    print("BALANCE GENERAL DE FINANZAS:")
 
     print("*******************************************************************************************")
     print(f".patrimonio total hasta {mes}: {sum(sueldo_anual_total)}")
