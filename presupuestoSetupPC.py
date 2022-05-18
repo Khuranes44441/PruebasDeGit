@@ -1,10 +1,8 @@
 def presupuestoSetup(mes):
-    listaPrecios = [7800,4350,3100,15800,1657]
+    listaPrecios = [7800,4350,3100]
     # 7400 = teclado mecanico
     # 4350 = mouse
     # 3100 = mouse pad xxl
-    # 15800 = ram 
-    # 1657 = funda para pc
     
     presupuesto = 0
     totalPresupuesto = 78275
