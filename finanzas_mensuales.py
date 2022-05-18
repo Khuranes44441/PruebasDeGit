@@ -122,39 +122,6 @@ def finanzasPersonales(mes):
 
     gasto_unico_setup_pc()
 
-# VALIDADOR DE FINANZAS
-
-    def validador_finanzas():
-        total = sum(patrimonio_total) - sum(gastos_mensuales) - valor_setup_pc
-        print("*******************************************************************************************")
-        print(f"ESTADO DE MI PATRIMONIO {mes}: ")
-        if total <= 0:
-            print("te quedaste sin guita papa, TE FELICITO :) ")
-        elif total <= 10000:
-            print("menos de 10 mil")
-        elif total <= 20000:
-            print("10 mil 0 mas")
-        elif total <= 30000:
-            print("20 mil o mas")
-        elif total <= 40000:
-            print("30 mil o mas")
-        elif total <= 50000:
-            print("40 mil o mas")
-        elif total <= 60000:
-            print("50 mil o mas")
-        elif total <= 70000:
-            print("60 mil o mas")
-        elif total <= 80000:
-            print("70 mil o mas")
-        elif total <= 90000:
-            print("80 mil o mas")
-        elif total <= 100000:
-            print("90 mil o mas")
-        else:
-            print("tenes mas de cien mil rey, vaya tranquilo :) ")
-
-    validador_finanzas()
-
 
 finanzasPersonales(mes="diciembre")
 # COLOCAR LOS MESES TRAABAJADOS DESDE ACA!!!
